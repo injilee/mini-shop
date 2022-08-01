@@ -16,19 +16,88 @@ li {
 }
 
 body {
+  width: 25em;
   background-color: #373c45;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .logo {
   width: 6.5em;
   height: 6em;
+  margin-top: 5em;
 }
 
 .selete-container {
   display: flex;
   flex-direction: row;
+  margin-top: 2em;
+}
+
+.seleteBtn {
+  margin-right: 0.7em;
+}
+
+.cloths-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.cloths-icon {
+  width: 3em;
+  height: 3em;
+}
+
+.cloths-icon,
+.btn {
+  cursor: pointer;
+}
+
+.cloths-icon:hover,
+.btn:hover {
+  transform: scale(1.2);
+}
+
+.btn {
+  width: 4em;
+  height: 2.5em;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.blue {
+  background-color: #387cbb;
+}
+.yellow {
+  background-color: #f7b523;
+}
+.pink {
+  background-color: #f87579;
+}
+
+/* shopping-list */
+.shopping-list {
+  width: 100%;
+  margin-top: 1.5em;
+}
+
+.item-box {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  background-color: #fff;
+  border-radius: 0.6em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+.items {
+  width: 3em;
+  height: 3em;
+}
+.info {
+  font-size: 1.2rem;
+  margin-left: 1em;
 }
