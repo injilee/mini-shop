@@ -1,3 +1,18 @@
+:root {
+  /* color */
+  --color-black: #373c45;
+  --color-white: #ffffff;
+  --color-blue: #387cbb;
+  --color-yellow: #f7b523;
+  --color-pink: #f87579;
+  --color-light-grey: #dfdfdf;
+
+  /* size */
+  --base-gap: 0.5em;
+  --size-button: 3em;
+  --button-font-size: 1rem;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -17,7 +32,7 @@ li {
 
 body {
   width: 25em;
-  background-color: #373c45;
+  background-color: var(--color-black);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,74 +43,78 @@ body {
 .logo {
   width: 6.5em;
   height: 6em;
-  margin-top: 5em;
+  margin-top: calc(var(--base-gap) * 10);
+  cursor: pointer;
+  transition: transform 100ms ease;
 }
 
 .selete-container {
   display: flex;
   flex-direction: row;
-  margin-top: 2em;
+  margin-top: calc(var(--base-gap) * 4);
 }
 
 .seleteBtn {
-  margin-right: 0.7em;
+  margin-right: calc(var(--base-gap) + 0.2em);
 }
 
-.cloths-icon img {
+.btn img {
   width: 100%;
   height: 100%;
 }
 
-.cloths-icon {
-  width: 3em;
-  height: 3em;
-}
-
-.cloths-icon,
 .btn {
+  width: var(--size-button);
+  height: var(--size-button);
+  transition: transform 100ms ease;
   cursor: pointer;
 }
 
-.cloths-icon:hover,
+.logo:hover,
 .btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
-.btn {
+.colorBtn {
   width: 4em;
   height: 2.5em;
-  font-size: 1rem;
+  font-size: var(--button-font-size);
   font-weight: bold;
 }
 
 .blue {
-  background-color: #387cbb;
+  background-color: var(--color-blue);
 }
 .yellow {
-  background-color: #f7b523;
+  background-color: var(--color-yellow);
 }
 .pink {
-  background-color: #f87579;
+  background-color: var(--color-pink);
 }
 
 /* shopping-list */
 .shopping-list {
   width: 100%;
-  margin-top: 1.5em;
+  height: 480px;
+  overflow-y: scroll;
+  margin-top: calc(var(--base-gap) + 1em);
 }
 
-.item-box {
+.shopping-list::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
   display: flex;
   align-items: center;
-  padding: 0.5em 1em;
-  background-color: #fff;
+  padding: var(--base-gap) calc(var(--base-gap) * 2);
+  background-color: var(--color-light-grey);
   border-radius: 0.6em;
   margin-bottom: 0.5em;
-  cursor: pointer;
 }
-.items {
-  width: 3em;
-  height: 3em;
+.item__thumbnail {
+  width: var(--size-button);
+  height: var(--size-button);
 }
 .info {
   font-size: 1.2rem;
