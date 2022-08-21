@@ -1,25 +1,40 @@
 'use strict';
 
-const blue = 'blue';
-const yellow = 'yellow';
-const pink = 'pink';
-
-const pants = 'p';
-const skirt = 's';
-const tShirts = 't';
-
-const colors = [blue, yellow, pink];
-const cloths = [pants, skirt, tShirts];
-
 const blueBtn = document.querySelector('.blue');
 const yellowBtn = document.querySelector('.yellow');
 const pinkBtn = document.querySelector('.pink');
 
 const itemList = document.querySelector('.shopping-list');
 
-// blueBtn.addEventListener('click', () => {
-//   console.log('blue');
-// });
+/* JSON */
+// const items = {
+//   type: ['pants', 'skirt', 'tShirts'],
+//   color: ['blue', 'yellow', 'pink'],
+//   size: ['S size', 'M size', 'L size'],
+//   male: ['female', 'male'],
+// };
+
+// Fetch the items from the JSON file
+const loadItems = new Promise((resolve, reject) => {
+  fetch('data/date.json')
+    .then((response) => response.json())
+    .then((json) => json.items);
+});
+
+function print() {
+  const li = document.createElement('li');
+  const span = document.createElement('span');
+  li.setAttribute('class', 'item');
+  span.setAttribute('class', 'info');
+
+  li.appendChild(span);
+  itemList.append(li);
+}
+
+blueBtn.addEventListener('click', () => {
+  console.log('blue');
+  print();
+});
 
 // yellowBtn.addEventListener('click', () => {
 //   console.log('yellow');
@@ -28,9 +43,3 @@ const itemList = document.querySelector('.shopping-list');
 // pinkBtn.addEventListener('click', () => {
 //   console.log('pink');
 // });
-
-function arrBlue() {
-  const blueItem = document.createElement('img');
-  blueItem.src = `./imgs/imgs/pink_s.png`;
-  console.log(blueItem);
-}

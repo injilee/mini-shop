@@ -1,0 +1,67 @@
+{
+  "item": [
+    {
+      "type": "pants",
+      "color": "blue",
+      "size": "S size",
+      "gender": "male",
+      "img": "./imgs/imgs/blue_p.png"
+    },
+    {
+      "type": "skirt",
+      "color": "pink",
+      "size": "S size",
+      "gender": "femle",
+      "img": "./imgs/imgs/pink_s.png"
+    },
+    {
+      "type": "pants",
+      "color": "pink",
+      "size": "M size",
+      "gender": "male",
+      "img": "./imgs/imgs/pink_p.png"
+    },
+    {
+      "type": "pants",
+      "color": "yellow",
+      "size": "S size",
+      "gender": "femle",
+      "img": "./imgs/imgs/yellow_p.png"
+    },
+    {
+      "type": "tShirts",
+      "color": "yellow",
+      "size": "L size",
+      "gender": "male",
+      "img": "./imgs/imgs/yellow_t.png"
+    },
+    {
+      "type": "skirt",
+      "color": "blue",
+      "size": "M size",
+      "gender": "male",
+      "img": "./imgs/imgs/blue_s.png"
+    },
+    {
+      "type": "tShirts",
+      "color": "yellow",
+      "size": "S size",
+      "gender": "femle",
+      "img": "./imgs/imgs/yellow_t.png"
+    },
+    {
+      "type": "skirt",
+      "color": "pink",
+      "size": "S size",
+      "gender": "female",
+      "img": "./imgs/imgs/blue_p.png"
+    },
+    {
+      "type": "skirt",
+      "color": "yellow",
+      "size": "S size",
+      "gender": "female",
+      "img": "./imgs/imgs/yellow_s.png"
+    }
+  ]
+}
