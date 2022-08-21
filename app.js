@@ -3,37 +3,39 @@
 const blueBtn = document.querySelector('.blue');
 const yellowBtn = document.querySelector('.yellow');
 const pinkBtn = document.querySelector('.pink');
-
 const itemList = document.querySelector('.shopping-list');
 
-/* JSON */
-// const items = {
-//   type: ['pants', 'skirt', 'tShirts'],
-//   color: ['blue', 'yellow', 'pink'],
-//   size: ['S size', 'M size', 'L size'],
-//   male: ['female', 'male'],
-// };
-
 // Fetch the items from the JSON file
-const loadItems = new Promise((resolve, reject) => {
-  fetch('data/date.json')
+function loadItems() {
+  return fetch('data/date.json')
     .then((response) => response.json())
     .then((json) => json.items);
-});
+}
 
-function print() {
-  const li = document.createElement('li');
-  const span = document.createElement('span');
-  li.setAttribute('class', 'item');
-  span.setAttribute('class', 'info');
+// load items
+loadItems()
+  .then((items) => {
+    displayItems(items);
+    console.log(items);
+  })
+  .catch((error) => console.log(error));
 
-  li.appendChild(span);
-  itemList.append(li);
+// UI
+function displayItems(items) {
+  itemList.innerHTML = items.map((item) => createHTMLElement(item)).join('');
+  console.log(items[1]);
+}
+
+function createHTMLElement(item) {
+  return `
+  <li class="item">
+    <img src="${item.img}" alt="${item.color} ${item.type}" class="item__thumbnail" />
+    <span class="info">${item.gender}, ${item.size}</span>
+</li>`;
 }
 
 blueBtn.addEventListener('click', () => {
   console.log('blue');
-  print();
 });
 
 // yellowBtn.addEventListener('click', () => {
