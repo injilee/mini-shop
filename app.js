@@ -1,10 +1,5 @@
 'use strict';
 
-const blueBtn = document.querySelector('.blue');
-const yellowBtn = document.querySelector('.yellow');
-const pinkBtn = document.querySelector('.pink');
-const itemList = document.querySelector('.shopping-list');
-
 // Fetch the items from the JSON file
 function loadItems() {
   return fetch('data/date.json')
@@ -16,14 +11,16 @@ function loadItems() {
 loadItems()
   .then((items) => {
     displayItems(items);
-    console.log(items);
+    setEventListener(items);
   })
   .catch((error) => console.log(error));
 
 // UI
 function displayItems(items) {
-  itemList.innerHTML = items.map((item) => createHTMLElement(item)).join('');
-  console.log(items[1]);
+  const itemList = document.querySelector('.shopping-list');
+  // const html = items.map((item) => createHTMLElement(item));
+  const html = items.map((item) => createHTMLElement(item)).join('');
+  itemList.innerHTML = html;
 }
 
 function createHTMLElement(item) {
@@ -34,14 +31,26 @@ function createHTMLElement(item) {
 </li>`;
 }
 
-blueBtn.addEventListener('click', () => {
-  console.log('blue');
-});
+/* handling events */
+function onClickBtn(event, item) {
+  const key = event.target.dataset.key;
+  const value = event.target.dataset.value;
 
-// yellowBtn.addEventListener('click', () => {
-//   console.log('yellow');
-// });
+  console.log(key, value);
+  if (key == null || value == null) {
+    return;
+  }
 
-// pinkBtn.addEventListener('click', () => {
-//   console.log('pink');
-// });
+  displayItems(item.filter((item) => item[key] === value));
+  console.log(item.filter((item) => item[key] === value));
+}
+
+function setEventListener(item) {
+  const logo = document.querySelector('.logo');
+  const buttons = document.querySelector('.selete-container');
+  console.log(buttons, item);
+  logo.addEventListener('click', () => displayItems(item));
+  buttons.addEventListener('click', (event) => onClickBtn(event, item));
+}
+
+// item.map((item) => item.color).filter((color) => color === targetColor),

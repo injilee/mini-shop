@@ -9,35 +9,23 @@
     <script defer src="./app.js"></script>
   </head>
   <body>
-    <img class="logo" src="./imgs/imgs/logo.png" alt=Logo" />
-    <ul class="selete-container">
-      <li class="seleteBtn">
-        <button class="btn" aria-label="choose T-Shirts">
-          <img src="./imgs/imgs/yellow_t.png" alt="T-Shirts" />
+    <img class="logo" src="./imgs/imgs/logo.png" alt="Logo" />
+      <section class="selete-container">
+        <button class="btn" data-key="type" data-value="tShirts" aria-label="choose T-Shirts">
+        <img src="./imgs/imgs/yellow_t.png" class="imgBtn" alt="T-Shirts" />
         </button>
-      </li>
-      <li class="seleteBtn">
-        <button class="btn" aria-label="choose Pants">
-          <img src="./imgs/imgs/yellow_p.png" alt="Pants" />
+        <button class="btn" data-key="type" data-value="pants" aria-label="choose Pants">
+          <img src="./imgs/imgs/yellow_p.png" class="imgBtn" alt="Pants" />
         </button>
-      </li>
-      <li class="seleteBtn">
-        <button class="btn" aria-label="choose Skirt">
-          <img src="./imgs/imgs/yellow_s.png" alt="Skirt" />
+        <button class="btn" data-key="type" data-value="skirt" aria-label="choose Skirt">
+          <img src="./imgs/imgs/yellow_s.png" class="imgBtn" alt="Skirt" />
         </button>
-      </li>
-      <li class="seleteBtn">
-        <button class="btn colorBtn blue" aria-label="choose Blue">Blue</button>
-      </li>
-      <li class="seleteBtn">
-        <button class="btn colorBtn yellow" aria-label="choose Yellow">
+        <button class="btn colorBtn blue" data-key="color" data-value="blue" aria-label="choose Blue">Blue</button>
+        <button class="btn colorBtn yellow" data-key="color" data-value="yellow" aria-label="choose Yellow">
           Yellow
         </button>
-      </li>
-      <li class="seleteBtn">
-        <button class="btn colorBtn pink" aria-label="choose Pink">Pink</button>
-      </li>
-    </ul>
+        <button class="btn colorBtn pink" data-key="color" data-value="pink" aria-label="choose Pink">Pink</button>
+      </section>
     <ul class="shopping-list">
   </body>
 </html>
