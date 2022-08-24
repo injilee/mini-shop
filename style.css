@@ -9,7 +9,7 @@
 
   /* size */
   --base-gap: 0.5em;
-  --size-button: 3em;
+  --size-button: 3.5em;
   --button-font-size: 1rem;
 }
 
@@ -54,17 +54,23 @@ body {
   margin-top: calc(var(--base-gap) * 4);
 }
 
-.imgBtn {
-  width: 100%;
-  height: 100%;
-}
-
 .btn {
   width: var(--size-button);
   height: var(--size-button);
   margin-right: calc(var(--base-gap) + 0.2em);
   transition: transform 100ms ease;
   cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.btn:nth-child(1) {
+  background-image: url('./imgs/imgs/yellow_t.png');
+}
+.btn:nth-child(2) {
+  background-image: url('./imgs/imgs/yellow_p.png');
+}
+.btn:nth-child(3) {
+  background-image: url('./imgs/imgs/yellow_s.png');
 }
 
 .logo:hover,
