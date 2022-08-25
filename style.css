@@ -40,6 +40,10 @@ body {
   margin: auto;
 }
 
+.invisible {
+  display: none;
+}
+
 .logo {
   width: 6.5em;
   height: 6em;

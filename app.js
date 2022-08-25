@@ -32,25 +32,21 @@ function createHTMLElement(item) {
 }
 
 /* handling events */
-function onClickBtn(event, item) {
+function onClickBtn(event, items) {
   const key = event.target.dataset.key;
   const value = event.target.dataset.value;
 
-  console.log(key, value);
   if (key == null || value == null) {
     return;
   }
 
-  displayItems(item.filter((item) => item[key] === value));
-  console.log(item.filter((item) => item[key] === value));
+  const filterd = items.filter((item) => item[key] === value);
+  displayItems(filterd);
 }
 
 function setEventListener(item) {
   const logo = document.querySelector('.logo');
   const buttons = document.querySelector('.selete-container');
-  console.log(buttons, item);
   logo.addEventListener('click', () => displayItems(item));
   buttons.addEventListener('click', (event) => onClickBtn(event, item));
 }
-
-// item.map((item) => item.color).filter((color) => color === targetColor),
