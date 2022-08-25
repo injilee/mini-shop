@@ -31,7 +31,7 @@
   <img src="./imgs/imgs/mobile_figma.png" alt="mobile design" />
 
 - Desktop</br>
-  <video width="300" height="300" src="./imgs/imgs/desktop.gif"></video>
+  ![desktop](https://user-images.githubusercontent.com/90603357/186694221-e0084df8-a539-48a8-b63b-7be0fc586906.gif)
 - Mobile</br>
 
 ## Skills
