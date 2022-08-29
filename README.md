@@ -31,7 +31,7 @@
   <img src="./imgs/imgs/mobile_figma.png" alt="mobile design" />
 
 - Desktop</br>
-  ![desktop](https://user-images.githubusercontent.com/90603357/186694221-e0084df8-a539-48a8-b63b-7be0fc586906.gif)
+  ![desktop](https://user-images.githubusercontent.com/90603357/187231071-1b70e728-e6bf-48f7-a4fa-7b672ccef2a3.gif)
 - Mobile</br>
 
 ## Skills
@@ -52,7 +52,7 @@
 
 ## Reference
 
-<a href="https://www.youtube.com/watch?v=We2Kv1HMGvc&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=21">드림코딩 by 엘리</a>
+<a href="https://academy.dream-coding.com/">드림코딩 by 엘리</a>
 
 ## Problem Solving Process
 
